@@ -31,14 +31,405 @@
             - Main: Name main section (wrap, contain, content,...)
             - Submain: Child section (Normally: level 02, level03)
             - item: title element, description element, item link.
-        
+        TODO: Step 91: Make full HTML Page
+              Step 02: Add options classes for element (Pre: -classes, -white, -black)
+              Step 03: Opt code with Image, Videos, Responsive
+              Step 04: Testing Resolve, merge code to backend branch
+              Step 05: Remain code HTML, CSS (Note: If Modular can more change.)
+        -------------------------------------------------
         Strucutre: 
             01 - Header
-            02 - Main
-            03 - Footer
+            02 - Section Banner
+            03 - Section Image
+            04 - Section Video
+            05: Section Customer
+            06: Section Intro Information
+            07: Section Start Free Trial
+            08: Footer
     --------------------------------------------------->
-    
 
+    <!-- 01 - Header -->
+    <header id="siteHeader" class="header fixed">
+        <div class="header--top active">
+            <span class="header--top-text">
+                See why Asana is a leader in the 2018 Forrester Wave™: Collaborative Work Management Tools for the Enterprise.
+                <a href="#" class="-white">Get the report</a>
+            </span>
+            <a class="header--top-icon icon icon--close"></a>
+        </div>
+        <!-- ------------------------------------------------- -->
+        <div class="header--row">
+            <div class="header--logo-wrapper">
+                <a href="index.html" class="header--logo"></a>
+            </div>
+            <div class="header--navbar-wrapper">
+                <div class="header--navbar row -f-end -f-middle">
+                    <nav class="header--nav">
+                        <a href="#" class="header--nav-item">Tour</a>
+                        <a href="#" class="header--nav-item">Product</a>
+                        <a href="#" class="header--nav-item">Pricing</a>
+                        <a href="#" class="header--nav-item">About Us</a>
+                        <ul class="header--list">
+                            <li class="header--list-item">
+                                Learn more
+                                <!-- Using svg library asana.com. Normally: We use width=15, height=15-->
+                                <svg class="icon--svg icon--svg-down-caret -icon-gray" width="15" height="15" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin">
+                                    <use xlink:href="images/svg/icons.svg#icon--down-caret"></use>
+                                </svg>
+                                <div class="header--list-wrapper">
+                                    <ul class="header--sublist">
+                                        <li class="header--list--item">
+                                            <a href="" id="">Documentations</a>
+                                        </li>
+                                        <li class="header--list--item">
+                                            <a href="" id="">Security</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="header--nav-item -hidden-logged">Log In</a>
+                    </nav>
+                    <div class="header--actions -hidden">
+                        <div class="-hidden-logged">
+                            <a href="#" class="header--btn btn -border" title="Start Free Trial">Start Free Trial</a>
+                        </div>
+                        <div class="-show-logged">
+                            <a href="#" class="header--btn btn -border" title="Go to Dashboard">Go to Dashboard</a>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div class="header--mobilenav-wrapper">
+                <a href="" class="header--mobilenav-toggle">
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <!-- ------------------------------------------------- -->
+        <nav id="nav" class="nav--mobile">
+            <div class="nav--mobile-container">
+                <div class="nav--mobile-content">
+                    <ul>
+                        <li><a href="#" title="Tour">Tour</a></li>
+                        <li><a href="#" title="Product">Product</a></li>
+                        <li><a href="#" title="About">About</a></li>
+                        <li><a href="#" title="Learn more">Learn more</a></li>
+                    </ul>
+                    <div class="nav--mobile--cta">
+                        <a href="#" class="btn -border -light -small">Start Free Trial</a>
+                        <a href="#">Log In</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End: Header -->
+
+    <!-- 02 - Section Banner -->
+    <section class="section -top">
+        <div class="center">
+            <div class="row -spacing-3">
+                <div class="sm-10 sm-off-1 lg-8 lg-off-2 xl-6 xl-off-3">
+                    <div class="stack--text">
+                        <h4 class="-h3">
+                            Make more time for work that matters
+                        </h4>
+                        <p class="-large">
+                            Asana is the work management platform teams use to stay focused on the goals, projects, and daily tasks that grow your business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="c-12 signup--homepage-center">
+                    <form action="" class="signup--form">
+                        <div class="signup--form-container">
+                            <div class="signup--form-row">
+                                <div class="signup--form-email">
+                                    <input class="input input--email" placeholder="name@company.com" name="email" type="email" autocomplete="off">
+                                </div>
+                                <button class="signup--form-submit submit -large">
+                                    Start Free Trial
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End: Section Banner -->
+
+    <!-- 03 - Section Image  -->
+    <section class="section">
+        <div class="center -full-width">
+            <div class="row screenshot -box-center -no-gutters">
+                <div class="screenshot--image"></div>
+            </div>
+            <div class="row screenshot--nav -no-gutters">
+                <div class="screenshot--nav-item">
+                    <div class="text--block">
+                        <div class="text--block-content">
+                            <p class="text--block-title -large">
+                                Get oranized
+                            </p>
+                            <p class="text--block-body">
+                                Plan and structure work in a way that’s best for you. Set priorities and deadlines. Share details and assign tasks. All in one place.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------- -->
+                <div class="screenshot--nav-item">
+                    <div class="text--block">
+                        <div class="text--block-content">
+                            <p class="text--block-title -large">
+                                Get oranized
+                            </p>
+                            <p class="text--block-body">
+                                Plan and structure work in a way that’s best for you. Set priorities and deadlines. Share details and assign tasks. All in one place.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                -------------------------------------------------
+                <div class="screenshot--nav-item">
+                    <div class="text--block">
+                        <div class="text--block-content">
+                            <p class="text--block-title -large">
+                                Get oranized
+                            </p>
+                            <p class="text--block-body">
+                                Plan and structure work in a way that’s best for you. Set priorities and deadlines. Share details and assign tasks. All in one place.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End: Section Image -->
+
+    <!-- 04 - Section Video -->
+    <section class="section">
+        <div class="row -items-center">
+            <div class="off-5 -small-last">
+                <section class="video -draw">
+                    <img src="" alt="" class="video--poster" data-video-play>
+                </section>
+            </div>
+            <div class="c-sm-4 offset-sm-1 c-xl-3 offset-xl-2">
+                <div class="stack--text">
+                    <h4>
+                        Make more time for work that matters
+                    </h4>
+                    <p class="-large">
+                        Asana is the work management platform teams use to stay focused on the goals, projects, and daily tasks that grow your business.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End: Section Video -->
+
+    <!-- 05: Section Customer -->
+    <div class="section -bg-gray">
+        <div class="row">
+            <div class="c-sm-10 offset-sm-1">
+                <div class="customer--slider">
+                    <div class="customer--slider-item -active" data-customer-slides>
+                        <div class="customer--slider-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="customer--slider-text">
+                            <div class="customer--slider-text-inner row">
+                                <div class="customer--slider-text-inner-col">
+                                    <p class="customer--slider-quote">
+                                        We track every single piece of creative and make sure they’re finished in time using Asana.
+                                    </p>
+                                    <p class="customer--slider-author">
+                                        <strong>Sky Albert</strong>
+                                        Head of Creative Services
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------------------------------- -->
+                    <div class="customer--slider-item" data-customer-slides>
+                        <div class="customer--slider-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="customer--slider-text">
+                            <div class="customer--slider-text-inner row">
+                                <div class="customer--slider-text-inner-col">
+                                    <p class="customer--slider-quote">
+                                        We track every single piece of creative and make sure they’re finished in time using Asana.
+                                    </p>
+                                    <p class="customer--slider-author">
+                                        <strong>Sky Albert</strong>
+                                        Head of Creative Services
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------------------------------- -->
+                    <div class="customer--slider-item" data-customer-slides>
+                        <div class="customer--slider-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="customer--slider-text">
+                            <div class="customer--slider-text-inner row">
+                                <div class="customer--slider-text-inner-col">
+                                    <p class="customer--slider-quote">
+                                        We track every single piece of creative and make sure they’re finished in time using Asana.
+                                    </p>
+                                    <p class="customer--slider-author">
+                                        <strong>Sky Albert</strong>
+                                        Head of Creative Services
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------------------------------- -->
+                    <div class="customer--slider-item" data-customer-slides>
+                        <div class="customer--slider-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="customer--slider-text">
+                            <div class="customer--slider-text-inner row">
+                                <div class="customer--slider-text-inner-col">
+                                    <p class="customer--slider-quote">
+                                        We track every single piece of creative and make sure they’re finished in time using Asana.
+                                    </p>
+                                    <p class="customer--slider-author">
+                                        <strong>Sky Albert</strong>
+                                        Head of Creative Services
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------------------------------- -->
+                    <div class="customer--slider-item" data-customer-slides>
+                        <div class="customer--slider-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="customer--slider-text">
+                            <div class="customer--slider-text-inner row">
+                                <div class="customer--slider-text-inner-col">
+                                    <p class="customer--slider-quote">
+                                        We track every single piece of creative and make sure they’re finished in time using Asana.
+                                    </p>
+                                    <p class="customer--slider-author">
+                                        <strong>Sky Albert</strong>
+                                        Head of Creative Services
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: Section Customer -->
+
+    <!-- 06: Section Intro Information -->
+    <section class="section">
+        <div class="center">
+            <div class="row -items-center">
+                <div class="c-md-6 -md-last">
+                    <img src="" alt="">
+                </div>
+                <div class="c-md-5 c-lg-4 offset-lg-1 c-xl-3 offset-xl-2">
+                    <div class="stack--text">
+                        <p class="-label">
+                            New and Noteworthy
+                        </p>
+                        <h4>
+                            Make more time for work that matters
+                        </h4>
+                        <p class="-large">
+                            Asana is the work management platform teams use to stay focused on the goals, projects, and daily tasks that grow your business.
+                        </p>
+                        <a href="#" title="Show more">Show more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End: Section Intro Information -->
+
+    <!-- 07: Section Start Free Trial -->
+    <section class="section -bg-gray">
+        <div class="center">
+            <div class="row -items-center">
+                <div class="c-sm-6 c-xl-5 offset-xl-1">
+                    <img src="" alt="">
+                </div>
+                <div class="c-sm-6 c-md-6 c-xl-4 offset-xl-1">
+                    <div class="stack--text">
+                        <h4>
+                            Make more time for work that matters
+                        </h4>
+                        <p class="-large">
+                            Asana is the work management platform teams use to stay focused on the goals, projects, and daily tasks that grow your business.
+                        </p>
+                        <form action="" class="signup--form">
+                            <div class="signup--form-container">
+                                <div class="signup--form-row">
+                                    <div class="signup--form-email">
+                                        <input class="input input--email" placeholder="name@company.com" name="email" type="email" autocomplete="off">
+                                    </div>
+                                    <button class="signup--form-submit submit -large">
+                                        Start Free Trial
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End: Section Start Free Trial -->
+
+    <!-- 08: Footer -->
+    <footer class="footer">
+        <div class="footer--main-wrapper">
+            <!-- Code here -->
+        </div>
+        <div class="footer--secondary-wrapper">
+            <div class="center -footer">
+                <div class="row -sm-middle">
+                    <div class="c-sm-10 offset-sm-1 offset-md-2">
+                        <div class="row -sm-middle">
+                            <div class="footer--secondary-item c-sm-3 c-md-2">
+                                
+                            </div>
+                            <div class="footer--secondary-item c-sm-3 c-md-2">
+                                
+                            </div>
+                            <div class="footer--secondary-item c-sm-3 c-md-2">
+                                
+                            </div>
+                            <div class="footer--secondary-item c-sm-3 c-md-2">
+                                
+                            </div>
+                            <div class="footer--secondary-item c-sm-3 c-md-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End: Footer -->
 
     <script src="scripts/main.min.js"></script>
 </body>
