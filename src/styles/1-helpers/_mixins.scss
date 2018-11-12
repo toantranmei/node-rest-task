@@ -1,0 +1,111 @@
+// Code block contain 
+@mixin make-container() {
+    width: 100%;
+    padding-left: ($gutter-main / 2);
+    padding-right: ($gutter-main / 2);
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin make-row() {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: ($gutter-main / 2);
+    padding-right: ($gutter-main / 2);
+    margin-left: -($gutter-main / 2);
+    margin-right: -($gutter-main / 2);
+}
+
+// Execute breakpoint to show screen
+@mixin media-breakpoint-up($name, $breakpoints: $breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+// create change max-width when responsive web browsers, Mobile-Desktop
+@mixin make-container-max-up($max-widths: $maxwidths, $break-points: $breakpoints) {
+    @each $breakpoint, $maxwidth in $max-widths {
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            max-width: $maxwidth;
+        }
+    }
+}
+
+// Make add Column 
+@mixin make-col($size, $columns) {
+    // Vi du: neu size=6 thi ta se co cong thuc: 6/12 * 100%
+    flex: 0 0 percentage($size / $columns);
+    max-width: percentage($size / $columns);
+}
+
+// Make add Offset
+@mixin make-col-of($size, $columns: $columns) {
+    $num: $size / $columns; // vd: 6/12
+    margin-left: if($num == 0, 0, percentage($num));
+}
+
+// Generate Column 
+@mixin make-columns($columns: $columns, $gutter-main: $gutter-main, $breakpoints: $breakpoints) {
+    // Tao ra mot block code co css chung
+    %grid-column{
+        position: relative;
+        width: 100%;
+        min-height: 1;
+        padding-left: ($gutter-main / 2);
+        padding-right: ($gutter-main / 2);
+    }
+
+    // Duyet cac breakpoint trong breakpoint de biet la dang o man hinh nao
+    @each $breakpoint in map-keys($breakpoints) { // get only name key
+        $show: breakpoint-show($breakpoint, $breakpoints);
+
+        // Des Columns
+        @for $i from 1 through $columns {
+            // Neu show tra ve null thi show hien thi ra gia ""
+            .c#{$show}-#{$i} {
+                @extend %grid-column;
+            }
+        }
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            .c#{$show} {
+                flex-basis: 0;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+
+            // Duyet cac column de chia cot
+            @for $i from 1 through $columns {
+                .c#{$show}-#{$i} {
+                    @include make-col($i, $columns);
+                }
+            }
+
+            // Thuc hien offset
+            @for $i from 0 through ($columns - 1) {
+                @if not ($show == "" and $i == 0) {
+                    .offset#{$show}-#{$i} {
+                        @include make-col-of($i, $columns)
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Call mixin to run execute
+@include make-columns();
+
+// Define mixin default my websites
+@mixin flex-pos {
+    flex: 0 1 auto;
+    position: relative;
+}

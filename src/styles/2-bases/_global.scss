@@ -1,0 +1,40 @@
+*, *:before, *:after, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a, .-a {
+    background: transparent;
+    color: $link-color;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color .3s;
+}
+body {
+    font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+}
+
+/*======================================
+            OPTIONS CLASSES
+======================================*/
+a.-white {
+    border-bottom: 2px solid #edf1f2;
+    color: #fff;
+}
+
+.-hidden {
+    display: block;
+}
+
+.-hidden-logged {
+    display: block;
+}
+
+.-show-logged {
+    display: none;
+}
+
+.-icon-gray {
+    color: $color-text-weak;
+}

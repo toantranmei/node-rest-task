@@ -62,7 +62,7 @@ router.get('/:taskId', (req, res, next) => {
 // Show all task within id of project
 router.get('/projects/:projectId', (req, res, next) => {
     console.log("Hello: " + req.params.projectId);
-    Task.find(req.params.projectId)
+    Task.find({ project: req.params.projectId })
         .exec()
         .then(docs => {
             console.log(docs);

@@ -1,0 +1,45 @@
+button, .btn {
+    background: $color-primary;
+    border-radius: 3px;
+    border: none;
+    color: $color-text-default;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 36px;
+    letter-spacing: .5px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .15s,color .15s ease-in-out;
+    white-space: nowrap;
+}
+
+.btn.-large {
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 24px;
+}
+
+.btn.-border {
+    background: transparent;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    line-height: 34px;
+}
+
+.btn:hover, btn:hover {
+    background-color: $color-background-hover;
+    border-bottom: none;
+    color: $color-text-default;
+    text-decoration: none;
+}
+
+.btn.-border:hover {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-text-default; 
+}

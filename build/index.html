@@ -14,6 +14,9 @@
     <title>Homepage | Front-end Architecture</title>
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Link CSS to Icon of Fontawesome ver 5.* -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Link CSS custom website. Note: Css generated from scss, not using css normal. -->
     <link rel="stylesheet" href="styles/style.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,7 +58,7 @@
                 See why Asana is a leader in the 2018 Forrester Wave™: Collaborative Work Management Tools for the Enterprise.
                 <a href="#" class="-white">Get the report</a>
             </span>
-            <a class="header--top-icon icon icon--close"></a>
+            <a class="header--top-icon icon icon--close"><i class="fas fa-times"></i></a>
         </div>
         <!-- ------------------------------------------------- -->
         <div class="header--row">
@@ -63,7 +66,7 @@
                 <a href="index.html" class="header--logo"></a>
             </div>
             <div class="header--navbar-wrapper">
-                <div class="header--navbar row -f-end -f-middle">
+                <div class="header--navbar row -sm-end -sm-middle">
                     <nav class="header--nav">
                         <a href="#" class="header--nav-item">Tour</a>
                         <a href="#" class="header--nav-item">Product</a>
@@ -102,7 +105,7 @@
             </div>
             <div class="header--mobilenav-wrapper">
                 <a href="" class="header--mobilenav-toggle">
-                    <span></span>
+                    <span><i class="fas fa-bars"></i></span>
                 </a>
             </div>
         </div>
@@ -130,7 +133,7 @@
     <section class="section -top">
         <div class="center">
             <div class="row -spacing-3">
-                <div class="sm-10 sm-off-1 lg-8 lg-off-2 xl-6 xl-off-3">
+                <div class="c-sm-10 off-sm-1 c-lg-8 off-lg-2 c-xl-8 offset-xl-2">
                     <div class="stack--text">
                         <h4 class="-h3">
                             Make more time for work that matters
@@ -143,13 +146,13 @@
             </div>
             <div class="row">
                 <div class="c-12 signup--homepage-center">
-                    <form action="" class="signup--form">
+                    <form action="" class="signup--form -hidden-logged">
                         <div class="signup--form-container">
                             <div class="signup--form-row">
                                 <div class="signup--form-email">
                                     <input class="input input--email" placeholder="name@company.com" name="email" type="email" autocomplete="off">
                                 </div>
-                                <button class="signup--form-submit submit -large">
+                                <button class="signup--form-submit submit btn -large">
                                     Start Free Trial
                                 </button>
                             </div>

@@ -1,0 +1,62 @@
+// Colors
+$theme-color: #dedede;
+$second-color: #999;
+$third-color: #333;
+$link-color: #796eff;
+
+$color-background: #fff;
+$color-background-hover: #635ac7;
+$color-primary: #796eff;
+$color-text-default: #fff;
+$color-text-heading: #151b26;
+$color-text-nav: #646f79;
+$color-text-weak: #b7bfc6;
+// Padding
+$gutter-main : 30px !default;
+
+// Text
+$font-size-base:              1rem !default;
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 2.8125 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+$line-height-base:              1 !default;
+$h1-line-height:                $line-height-base * 2.5 !default;
+$h2-line-height:                $line-height-base * 2 !default;
+$h3-line-height:                $line-height-base * 1.244 !default;
+$h4-line-height:                $line-height-base * 1.5 !default;
+$h5-line-height:                $line-height-base * 1.25 !default;
+$h6-line-height:                $line-height-base !default;
+
+$headings-font-weight: 400;
+$headings-margin-bottom: 32px;
+$headings-margin-top: 0;
+
+
+// Distance
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+@include _assert-ascending($breakpoints, "$breakpoints");
+@include _assert-starts-at-zero($breakpoints);
+
+
+$maxwidths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+) !default;
+
+@include _assert-ascending($maxwidths, "$maxwidths");
+
+// Column Defines
+$columns: 12 !default;

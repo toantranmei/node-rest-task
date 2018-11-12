@@ -18,7 +18,6 @@ router.get('/', (req, res, next) => {
                 projects: docs.map(doc => {
                     return {
                         _id: doc._id,
-                        task: doc.task,
                         nameProject: doc.nameProject,
                         descProject: doc.descProject,
                         request: {
